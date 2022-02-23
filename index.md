@@ -30,16 +30,12 @@ This chain is used for outgoing connections. For example, if you try to ping how
 ## Policy Chain Default Behavior
 Before going in and configuring specific rules, you’ll want to decide what you want the default behavior of the three chains to be. In other words, what do you want iptables to do if the connection doesn’t match any existing rules?
 To see what your policy chains are currently configured to do with unmatched traffic, run the iptables -L command.
-https://www.howtogeek.com/wp-content/uploads/2013/12/3-policy-setting.jpg?trim=1,1&bg-color=000&pad=1,1
+
+![](https://www.howtogeek.com/wp-content/uploads/2013/12/3-policy-setting.jpg?trim=1,1&bg-color=000&pad=1,1)
 
 As you can see, we also used the grep command to give us cleaner output. In that screenshot, our chains are currently figured to accept traffic.
 
 More times than not, you’ll want your system to accept connections by default. Unless you’ve changed the policy chain rules previously, this setting should already be configured. Either way, here’s the command to accept connections by default:
-
-
-## 
-
-
 
 
 ### 
