@@ -37,8 +37,26 @@ As you can see, we also used the grep command to give us cleaner output. In that
 
 More times than not, you’ll want your system to accept connections by default. Unless you’ve changed the policy chain rules previously, this setting should already be configured. Either way, here’s the command to accept connections by default:
 
+## Connection-specific Responses
+With your default chain policies configured, you can start adding rules to iptables so it knows what to do when it encounters a connection from or to a particular IP address or port. In this guide, we’re going to go over the three most basic and commonly used “responses”.
 
-### 
+Accept – Allow the connection.
+
+Drop – Drop the connection, act like it never happened. This is best if you don’t want the source to realize your system exists.
+
+Reject – Don’t allow the connection, but send back an error. This is best if you don’t want a particular source to connect to your system, but you want them to know that your firewall blocked them.
+
+The best way to show the difference between these three rules is to show what it looks like when a PC tries to ping a Linux machine with iptables configured for each one of these settings.
+
+Allowing the connection:
+
+![](https://www.howtogeek.com/wp-content/uploads/2013/12/4-accept.jpg?trim=1,1&bg-color=000&pad=1,1)
+
+Dropping the connection:
+![](https://www.howtogeek.com/wp-content/uploads/2013/12/5-drop.jpg?trim=1,1&bg-color=000&pad=1,1)
+
+Rejecting the connection:
+![](https://www.howtogeek.com/wp-content/uploads/2013/12/6-reject.jpg?trim=1,1&bg-color=000&pad=1,1)
 
 
 ```
