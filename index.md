@@ -63,9 +63,8 @@ As we mentioned earlier, a lot of protocols are going to require two-way communi
 
 That’s where connection states come in, which give you the capability you’d need to allow two way communication but only allow one way connections to be established. Take a look at this example, where SSH connections FROM 10.10.10.10 are permitted, but SSH connections TO 10.10.10.10 are not. However, the system is permitted to send back information over SSH as long as the session has already been established, which makes SSH communication possible between these two hosts.
 
-iptables -A INPUT -p tcp --dport ssh -s 10.10.10.10 -m state --state NEW,ESTABLISHED -j ACCEPT
+![image](https://user-images.githubusercontent.com/89552767/155385833-6b36a57a-820f-47a4-8810-34755f13e681.png)
 
-iptables -A OUTPUT -p tcp --sport 22 -d 10.10.10.10 -m state --state ESTABLISHED -j ACCEPT
 
 ```
 Thank you readers, and wait for next week blog
