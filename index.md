@@ -3,11 +3,11 @@ layout: default
 ---
 
 
-## [The Concept of a Linux Firewall: IPtables](https://www.youtube.com/watch?v=eC8scXX1_1M)
+## [Comparing the 2 Cloud Giants: AWS vs Azure](https://www.youtube.com/watch?v=xCabPpcq8Ac)
 
 [//]: #  There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-## About iptables
+## Azure vs. AWS: What is the Difference Between AWS and Azure
 iptables is a command-line firewall utility that uses policy chains to allow or block traffic. When a connection tries to establish itself on your system, iptables looks for a rule in its list to match it to. If it doesn’t find one, it resorts to the default action.
 
 iptables almost always comes pre-installed on any Linux distribution. To update/install it, just retrieve the iptables package:
